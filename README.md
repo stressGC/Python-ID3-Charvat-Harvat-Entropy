@@ -78,6 +78,9 @@ Nous avons obtenu un taux de détection quasiment similaire à celui de l'articl
 
 ![Résultats](https://github.com/stressGC/data-mining-id3-custom/blob/master/results.PNG "script results")
 
+L’entropie de Shannon, utilisée pour l’algorithme ID3, donne des résultats complexes, ainsi qu'un nombre très important de nœuds, de feuilles et de règles de décision. Cela implique une perte de temps dans la classification de l'algorithme.
+
+En utilisant l’entropie de Harvat et Charvat à la place de l’entropie de Shanon, les résultats sont plus simples, le nombre de nœuds et de règles de décision est réduit, impliquant une classification plus rapide.
 
 #### Question 5 : Quelle est la valeur optimale du paramètre « alpha ». Expliquez, comment vous avez procédé pour obtenir cette valeur ?
 
