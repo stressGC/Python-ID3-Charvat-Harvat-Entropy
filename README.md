@@ -55,14 +55,14 @@ Voir ci-dessus.
 
 Pour l'échantillonage nous avons utilisé un **train/test split** disponible via la librairie SKLearn.
 
-### Question 4 : Est-ce-que vous avez obtenu les mêmes résultats que l’article ? Si ce n’est pas le cas, justifiez votre réponse ? Expliquez pourquoi cette nouvelle entropie d’Harvat et Charvat donne une meilleure solution ?
+#### Question 4 : Est-ce-que vous avez obtenu les mêmes résultats que l’article ? Si ce n’est pas le cas, justifiez votre réponse ? Expliquez pourquoi cette nouvelle entropie d’Harvat et Charvat donne une meilleure solution ?
 
 Nous avons obtenu un taux de détection quasiment similaire à celui de l'article de 96.55%.
 
 ![Résultats](https://github.com/stressGC/data-mining-id3-custom/blob/master/results.PNG "script results")
 
 
-### Question 5 : Quelle est la valeur optimale du paramètre « alpha ». Expliquez, comment vous avez procédé pour obtenir cette valeur ?
+#### Question 5 : Quelle est la valeur optimale du paramètre « alpha ». Expliquez, comment vous avez procédé pour obtenir cette valeur ?
 
 Nous avons lancé le script de classification à l'intérieur d'une boucle, modifiant la valeur d'*alpha* à chaque itération. Nous avons fait varier *alpha* avec un pas de 0.05 allant de 0.05 à 0.95. Nous avons gardé le taux de performance le plus élevé. La valeur optimale que nous avons trouvé est de **0.5** pour *alpha*.
 
