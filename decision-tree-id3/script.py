@@ -15,7 +15,7 @@ estimator = Id3Estimator()
 print("->Fitting ID3 classifier")
 estimator.fit(X_train, y_train)
 
-print("->reating dot file")
+print("->Writing dot file")
 export_graphviz(estimator.tree_, 'tree.dot')
 
 print("->Calculating predictions")
@@ -28,6 +28,9 @@ for index, val in enumerate(pred):
 
 percentage = well_detected / len(pred) * 100
 print("predictions: ", well_detected, "/", len(pred), " = ", percentage, "%")
+
+
+print("error rate: ", (100 - percentage), "%")
 
 
 

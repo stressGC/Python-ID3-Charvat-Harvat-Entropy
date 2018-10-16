@@ -51,6 +51,8 @@ L’article traite de la détection de tentatives d’intrusion dans un système
 
 Dans cet article, on introduit la notion d’une constante ‘alpha’ dont la valeur est comprise entre 0 et 1. Cette constante influe sur une partie de l’algorithme. Le jeu de données utilisé est issu de la DARPA, Defense Advanced Research Projects Agency, agence de recherche et développement dans le domaine militaire. Ce jeu de données contient plus de cinq millions d’instances.
 
+Pour définir les règles d’intrusion, on utilise l’entropie d’Harvard et Charvat à la place de l’entropie de Shanon comme c’est le cas avec ID3. Le résultat expérimental nous montre qu’un un algorithme de détection d’intrusion basé sur l’algorithme ID3 est réalisable, efficace, et il est surtout très précis. La prochaine étape pour les chercheurs sera de pouvoir détecter une intrusion le plus précisément possible afin qu’aucune ne passe à travers les mailles du filet.
+
 
 #### Question 2 : Modifier l’algorithme ID3 en utilisant l’entropie d’Harvat et Charvat décrite dans l’article « Intrusion detection and classification using improved ID3 algorithm of data mining »
 
