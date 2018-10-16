@@ -76,7 +76,7 @@ Il est disponible en format [PDF](https://github.com/stressGC/data-mining-id3-cu
 
 Nous avons obtenu un taux de détection quasiment similaire à celui de l'article de 96.55%. La légère différence peu s'expliquer par les choix que nous avons fait pour séparer le dataset en train & test. De plus, nous avons utilisé le dataset de SKLearn qui n'a pas forcément exactement les mêmes entrées que celui de l'article. Finalement, nous ne groupons pas la classification par type d'attaque ou par attaque ou non, ce qui expliqué des résultats un peu inférieurs.
 
-![Résultats](https://github.com/stressGC/data-mining-id3-custom/blob/master/results.png "script results")
+![Résultats](https://github.com/stressGC/data-mining-id3-custom/blob/master/results.PNG "script results")
 
 
 #### Question 5 : Quelle est la valeur optimale du paramètre « alpha ». Expliquez, comment vous avez procédé pour obtenir cette valeur ?
