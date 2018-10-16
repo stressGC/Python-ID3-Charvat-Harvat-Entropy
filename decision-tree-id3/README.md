@@ -15,7 +15,8 @@ using the guidelines for Scikit-learn-contrib. It is licensed under the
 - Scikit-learn (>= 0.17)
 
 ```bash
-pip install NumPy
+pip install numpy
+pip install scipy
 pip install scikit-learn
 ```
 
@@ -23,7 +24,7 @@ pip install scikit-learn
 Clone the project using:
 ```bash
 git clone https://github.com/stressGC/data-mining-id3-custom.git
-cd decision-tree-id3
+cd data-mining-id3-custom/decision-tree-id3
 python setup.py install
 ```
 
@@ -50,10 +51,16 @@ We achieved having 96.56% of well-detected attacks.
 
 Voir ci-dessus.
 
-#### Question 3 : Expérimenter cette nouvelle implantation en utilisant la même base de données « KDD99 » sur la détection d’intrusion et le protocole de validation décrit dans l’article. Expliquez comment vous avez procédé pour l’échantillonnage et la manière dont vous avez mené les tests
+#### Question 3 : Expérimenter cette nouvelle implantation en utilisant la même base de données « KDD99 » sur la détection d’intrusion et le protocole de validation décrit dans l’article. Expliquez comment vous avez procédé pour l’échantillonnage et la manière dont vous avez mené les tests.
+
+Pour l'échantillonage nous avons utilisé un **train/test split** disponible via la librairie SKLearn.
+
+### Question 4 : Est-ce-que vous avez obtenu les mêmes résultats que l’article ? Si ce n’estpas le cas, justifiez votre réponse ? Expliquez pourquoi cette nouvelle entropie d’Harvat et Charvat donne une meilleure solution ?
 
 
 
+### Question 5 : Quelle est la valeur optimale du paramètre « alpha ». Expliquez, comment vous avez procédé pour obtenir cette valeur ?
 
+Nous avons lancé le script de classification à l'intérieur d'une boucle, modifiant la valeur d'*alpha* à chaque itération. Nous avons fait varier *alpha* avec un pas de 0.05 allant de 0.05 à 0.95. Nous avons gardé le taux de performance le plus élevé. La valeur optimale que nous avons trouvé est de **0.5** pour *alpha*.
 
 
