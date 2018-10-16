@@ -31,3 +31,13 @@ following Python script:
 python script.py
 ```
 
+This script uses our custom ID3 implementation based on Harvat & Charvat's entropy. We used the KDDCup99 dataset included in SKLean. We firstly split the data into train and test sets (80 and 20%). Once the model is computed, the tree is exported as a .dot file (tree.dot), this file can be transformed into an image online. The result is in the repo as tree.pdf.
+
+## LAB
+
+We wrote the [script](https://github.com/stressGC/data-mining-id3-custom/blob/master/decision-tree-id3/script.py "script.py") to merge all the logic and dependencies. The changes made on the entropy's calculations have been made in the file [splitter.py](https://github.com/stressGC/data-mining-id3-custom/blob/master/decision-tree-id3/id3/splitter.py "splitter.py") under the function named *\_entropy*. We left the basic ID3's entropy calculation commented.
+
+We achieved having 96.56% of well-detected attacks.
+
+
+

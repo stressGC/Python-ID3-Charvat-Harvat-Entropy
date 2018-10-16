@@ -1,11 +1,8 @@
 from id3 import Id3Estimator
 from sklearn.datasets import fetch_kddcup99
 from sklearn.model_selection import train_test_split
-from sklearn import tree
 from id3 import export_graphviz
-import pandas as pd
 import numpy as np
-import pydot
 
 bunch = fetch_kddcup99(subset="SA")
 
