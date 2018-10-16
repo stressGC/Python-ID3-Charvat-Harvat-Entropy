@@ -10,9 +10,14 @@ using the guidelines for Scikit-learn-contrib. It is licensed under the
 
 #### Dependencies
 
-- Python (>= 2.7 or >= 3.3)
+- [Python](https://www.python.org/downloads/ "download Python") (>= 2.7 or >= 3.3) 
 - NumPy (>= 1.6.1)
 - Scikit-learn (>= 0.17)
+
+```bash
+pip install NumPy
+pip install scikit-learn
+```
 
 #### Local installation
 Clone the project using:
