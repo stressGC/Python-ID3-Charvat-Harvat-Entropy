@@ -15,13 +15,13 @@ target = bunch.target
 X_train, X_test, y_train, y_test = train_test_split(data, target, test_size=.2, random_state=17)
 
 estimator = Id3Estimator()
-print("fitting ID3 classifier")
+print("->Fitting ID3 classifier")
 estimator.fit(X_train, y_train)
 
-print("creating dot file")
-export_graphviz(estimator.tree_, 'bzz.dot')
+print("->reating dot file")
+export_graphviz(estimator.tree_, 'tree.dot')
 
-print("calculating predictions")
+print("->Calculating predictions")
 pred = estimator.predict(X_test)
 
 well_detected = 0
@@ -30,7 +30,7 @@ for index, val in enumerate(pred):
 		well_detected += 1
 
 percentage = well_detected / len(pred) * 100
-print(well_detected, "/", len(pred), " = ", percentage, "%")
+print("predictions: ", well_detected, "/", len(pred), " = ", percentage, "%")
 
 
 
