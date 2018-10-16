@@ -45,7 +45,12 @@ We achieved having 96.56% of well-detected attacks.
 
 ## LAB 01 - Georges Cosson & Antoine Demon
 
-#### Question 1 :  Faire la synthèse de [l’article](https://github.com/stressGC/data-mining-id3-custom/blob/master/article.pdf "article") ?
+#### Question 1 :  Faire la synthèse de l’[article](https://github.com/stressGC/data-mining-id3-custom/blob/master/article.pdf "article") ?
+
+L’article traite de la détection de tentatives d’intrusion dans un système informatique en nous présentant un classeur issu de l’algorithme ID3. Selon l’article, ce classeur est bien plus puissant que les classeurs existants jusqu’alors. L’utilisation de l’algorithme ID3 permet aux classeurs d’apprendre à différencier les requêtes issues d’une utilisation normale de celles issues d’une attaque.
+
+Dans cet article, on introduit la notion d’une constante ‘alpha’ dont la valeur est comprise entre 0 et 1. Cette constante influe sur une partie de l’algorithme. Le jeu de données utilisé est issu de la DARPA, Defense Advanced Research Projects Agency, agence de recherche et développement dans le domaine militaire. Ce jeu de données contient plus de cinq millions d’instances.
+
 
 #### Question 2 : Modifier l’algorithme ID3 en utilisant l’entropie d’Harvat et Charvat décrite dans l’article « Intrusion detection and classification using improved ID3 algorithm of data mining »
 
@@ -53,11 +58,16 @@ Voir ci-dessus.
 
 #### Question 3 : Expérimenter cette nouvelle implantation en utilisant la même base de données « KDD99 » sur la détection d’intrusion et le protocole de validation décrit dans l’article. Expliquez comment vous avez procédé pour l’échantillonnage et la manière dont vous avez mené les tests.
 
-Pour l'échantillonage nous avons utilisé un **train/test split** disponible via la librairie SKLearn.
+Pour l'échantillonage nous avons utilisé un **train/test split** de ratio 80/20% disponible via la librairie SKLearn. Nous avons fait varier ce ratio de 50/50% à 90/10%, en gardant les meilleurs résultats: 80/20%. Nous avons calculé le taux de détection avec la formule suivante :
+
+```detection_rate = number_of_correctly_predicted * 100 / total_number_of_instances```
+
+Le taux d'error peut se calculer d'après ```1 - detection_rate```.
+
 
 #### Question 4 : Est-ce-que vous avez obtenu les mêmes résultats que l’article ? Si ce n’est pas le cas, justifiez votre réponse ? Expliquez pourquoi cette nouvelle entropie d’Harvat et Charvat donne une meilleure solution ?
 
-Nous avons obtenu un taux de détection quasiment similaire à celui de l'article de 96.55%.
+Nous avons obtenu un taux de détection quasiment similaire à celui de l'article de 96.55%. La légère différence peu s'expliquer par les choix que nous avons fait pour séparer le dataset en train & test. De plus, nous avons utilisé le dataset de SKLearn qui n'a pas forcément exactement les mêmes entrées que celui de l'article. Finalement, nous ne groupons pas la classification par type d'attaque ou par attaque ou non, ce qui expliqué des résultats un peu inférieurs.
 
 ![Résultats](https://github.com/stressGC/data-mining-id3-custom/blob/master/results.PNG "script results")
 
